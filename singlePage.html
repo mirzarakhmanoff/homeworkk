@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cards</title>
+  <style>
+    .popular__card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px;
+      cursor: pointer;
+      transition: box-shadow 0.3s;
+    }
+    .popular__card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card__img {
+      position: relative;
+    }
+    .card__img span {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .card__desc {
+      margin-top: 16px;
+    }
+    .card__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="popular__card">
+    <a href="details.html?id=1" class="card__link">
+      <div class="card__img">
+        <span>4.8 <i class="fa-solid fa-star"></i></span>
+        <img src="https://via.placeholder.com/150" alt="Vanilla Latte" />
+      </div>
+      <div class="card__desc">
+        <div class="card__title">
+          <h3>Vanilla Latte</h3>
+          <span>21 K</span>
+        </div>
+        <div class="card__buttons">
+          <p>Bread with meat and vegetables</p>
+          <img src="./img/Frame 5.svg" alt="Button Image" />
+        </div>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
