@@ -191,6 +191,7 @@
   position: relative;
   height: 500px;
 }
+
 .path {
   width: 95%;
   height: 300px;
@@ -220,6 +221,7 @@
     0 20px
   );
 }
+
 .card__1 {
   background-image: url("./img/unsplash_RFHFV7lVQBY.png");
 }
@@ -333,4 +335,36 @@
 .data-button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.product__btn {
+  width: 196px;
+  height: 46px;
+  background: rgba(56, 88, 214, 1);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 5s00;
+  line-height: 27px;
+  text-align: center;
+  color: rgb(255, 255, 255, 1);
+  border-radius: 22px;
+  border: none;
+  margin-top: 69px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.product__btn:hover {
+  cursor: pointer;
+  background: green;
+}
+.product__btn:active {
+  transform: scale(0.7);
+  opacity: 7;
 }
