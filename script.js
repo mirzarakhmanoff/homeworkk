@@ -8,16 +8,11 @@ let offSet = 1;
 let count = 6;
 
 async function getProducts(api, limit, category) {
-  let response = await fetch(
-    `${api}/products${category ? `/category/${category}` : ""}?limit=${limit}`
-  );
+  let response = await fetch(`${api}/products${category}?limit=${limit}`);
   response
     .json()
     .then((res) => createCard(res.products))
-    .catch((err) => console.error(err))
-    .finally(() => {
-      if (skeleton) skeleton.style.display = "none";
-    });
+    .catch((err) => err);
 }
 
 getProducts(USER_API, count, "");
@@ -55,13 +50,12 @@ function createCard(products) {
 }
 
 async function getCategories(api) {
-  let response = await fetch(`${api}/products/categories?limit=10`); // Изменен URL на правильный
+  let response = await fetch(`${api}/products/category-list?limit=10`);
   response
     .json()
     .then((res) => createCategories(res))
     .catch((err) => console.error(err));
 }
-
 getCategories(USER_API);
 
 function createCategories(categories) {
@@ -69,9 +63,10 @@ function createCategories(categories) {
     let addCategory = document.createElement("li");
     addCategory.classList.add("data-button");
     addCategory.innerHTML = `
-          <data value="${e}">${e}</data>
+          <data value="/category/${e}">${e}</data>
         `;
     collection.appendChild(addCategory);
+    console.log(e);
   });
 }
 
